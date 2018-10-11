@@ -5,7 +5,10 @@ $leaveOnDeploymentDirectories = @(                # Directories that are not in 
     "ApplicationState",
     "Cache",
     "LogFiles",
-    "Search")
+    "Search",
+    "forms",
+    "Xslt",
+    "InlineCSharpFunctions")                    # the forms, xslt and InlineCSharpFunctions are here because C1 runtime will create these (empty). And then /MOR will delete - and IIS restart
 
 #
 # defaults
