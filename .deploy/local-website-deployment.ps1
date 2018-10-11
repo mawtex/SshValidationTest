@@ -1,7 +1,15 @@
-$excludeFiles = (".deployment", ".*")            # ("like,"this") - environment files like web.prod.config will be cleaned up automatically
-$excludeDirectories = (".deploy", ".*")
+$excludeFiles = @(".deployment", ".*")            # ("like,"this") - environment files like web.prod.config will be cleaned up automatically
+$excludeDirectories = @(".deploy", ".*")
 
+$leaveOnDeploymentDirectories = @(                # Directories that are not in git, but should also NOT be deleted on the deployment - like temp state and logs
+    "ApplicationState",
+    "Cache",
+    "LogFiles",
+    "Search")
+
+#
 # defaults
+#
 $deploymentSource = if ($Env:DEPLOYMENT_SOURCE) { $Env:DEPLOYMENT_SOURCE } else { ".." };
 $deploymentTarget = if ($Env:DEPLOYMENT_TARGET) { $Env:DEPLOYMENT_TARGET } else { "..\..\website_deployed" };
 $deploymentEnvironment = if ($Env:DEPLOYMENT_ENVIRONMENT) { $Env:DEPLOYMENT_ENVIRONMENT } else { "prd-cd" };
@@ -9,7 +17,9 @@ $deploymentEnvironment = if ($Env:DEPLOYMENT_ENVIRONMENT) { $Env:DEPLOYMENT_ENVI
 # avoiding aws temp dir ($Env:DEPLOYMENT_TEMP) since it require full copy of repo each time, easily adding 50+ seconds to deploy + tons of useless disk io
 $deploymentTemp = "..\..\website_deploy_temp" ; 
 
+#
 # functions
+#
 function Get-EnvFilenamePatterns {
     Param ([string]$env)
 
@@ -47,7 +57,9 @@ function Get-EnvFilenamePatterns {
     }
 }
 
+#
 # start status
+#
 if ($Env:DEPLOYMENT_SOURCE -eq $null -or $Env:DEPLOYMENT_TARGET -eq $null -or $Env:DEPLOYMENT_ENVIRONMENT -eq $null )
 {
     [console]::WriteLine("Environment variables DEPLOYMENT_SOURCE DEPLOYMENT_TARGET DEPLOYMENT_ENVIRONMENT not set, asuming some default values.`n")
@@ -63,11 +75,15 @@ $($MyInvocation.MyCommand.Name) running using these settings:
     excludeFiles:           $excludeFiles
     `n")
 
+#
 # start
+#
 [console]::WriteLine("Robocopy to temp:")
-robocopy /mir $deploymentSource $deploymentTemp /r:3 /w:1 /XF $excludeFiles  /XD $excludeDirectories /njh /ndl /nc /ns /np
+robocopy /mir $deploymentSource $deploymentTemp /r:3 /w:1 /XF @excludeFiles  /XD @excludeDirectories /njh /ndl /nc /ns /np
 
+#
 # fix *.prod.* deployment etc.
+#
 [console]::WriteLine("Environment specific files task:")
 $envFilenamePatterns = Get-EnvFilenamePatterns( $deploymentEnvironment.ToLower() )
 [console]::WriteLine("    envFilenamePattern: $envFilenamePatterns")
@@ -89,15 +105,20 @@ foreach ($envFile in $envFiles)
     }
 }
 
+#
 # deleting *.ENV.* files
+#
 $allEnvFilenamePatterns = Get-EnvFilenamePatterns("all")
 Get-ChildItem "$deploymentTemp\*" -include $allEnvFilenamePatterns -Recurse -Force | Remove-Item
 
 [console]::WriteLine("    deleted all environment specific template files")
 
+#
+# final copying
+#
 [console]::WriteLine("Robocopy to target:")
-robocopy /e $deploymentTemp $deploymentTarget /r:1 /w:1 /njh /ndl /nc /ns /np
+robocopy /e $deploymentTemp $deploymentTarget /r:1 /w:1 /njh /ndl /nc /ns /np 
 [console]::WriteLine("    Completed: first speed run")
-robocopy /e $deploymentTemp $deploymentTarget /r:3 /w:5 /njh /ndl /nc /ns /np
+robocopy /mir $deploymentTemp $deploymentTarget /r:3 /w:5 /njh /ndl /nc /ns /np /xd @leaveOnDeploymentDirectories
 [console]::WriteLine("    Completed: follow up robust run")
 
