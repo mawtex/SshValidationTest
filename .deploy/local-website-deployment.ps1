@@ -67,12 +67,13 @@ if ($Env:DEPLOYMENT_SOURCE -eq $null -or $Env:DEPLOYMENT_TARGET -eq $null -or $E
 
 [console]::WriteLine("
 $($MyInvocation.MyCommand.Name) running using these settings:
-    deploymentSource:       $deploymentSource
-    deploymentTarget:       $deploymentTarget
-    deploymentEnvironment:  $deploymentEnvironment
-    deploymentTemp:         $deploymentTemp
-    excludeDirectories:     $excludeDirectories
-    excludeFiles:           $excludeFiles
+    deploymentSource:               $deploymentSource
+    deploymentTarget:               $deploymentTarget
+    deploymentEnvironment:          $deploymentEnvironment
+    deploymentTemp:                 $deploymentTemp
+    excludeDirectories:             $excludeDirectories
+    excludeFiles:                   $excludeFiles
+    leaveOnDeploymentDirectories:   $leaveOnDeploymentDirectories
     `n")
 
 #
@@ -116,9 +117,9 @@ Get-ChildItem "$deploymentTemp\*" -include $allEnvFilenamePatterns -Recurse -For
 #
 # final copying
 #
-[console]::WriteLine("Robocopy to target:")
+[console]::WriteLine("Robocopy to target, pure copy only, affected files:")
 robocopy /e $deploymentTemp $deploymentTarget /r:1 /w:1 /njh /ndl /nc /ns /np 
-[console]::WriteLine("    Completed: first speed run")
+[console]::WriteLine("Robocopy to target, mirroring (excluding $leaveOnDeploymentDirectories), affected files:")
 robocopy /mir $deploymentTemp $deploymentTarget /r:3 /w:5 /njh /ndl /nc /ns /np /xd @leaveOnDeploymentDirectories
-[console]::WriteLine("    Completed: follow up robust run")
+[console]::WriteLine("    Completed custom part of deployment")
 
