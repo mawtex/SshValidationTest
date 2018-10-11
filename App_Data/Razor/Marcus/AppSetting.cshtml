@@ -1,0 +1,22 @@
+﻿@inherits RazorFunction
+
+@functions {
+    public override string FunctionDescription
+    {
+        get  { return "Output the value of a named AppSetting"; }
+    }
+     
+    [FunctionParameter(Label = "AppSetting Name")]
+    public string AppSettingName { get; set; }
+
+}
+
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:f="http://www.composite.net/ns/function/1.0">
+    <head>
+    </head>
+    <body>
+        <div>
+            AppSetting @AppSettingName has value <strong>@System.Web.Configuration.WebConfigurationManager.AppSettings[AppSettingName]</strong>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<pc:PackageCreator xmlns:mi="http://www.composite.net/ns/management/packageinstaller/1.0" xmlns:pc="http://www.composite.net/ns/management/packagecreator/2.0" xmlns:help="http://www.composite.net/ns/help/1.0">
+	<pc:Files>
+		<Add name=".deployment" />
+		<Add name=".gitignore" />
+		<Add name="App_Data\Composite\TreeDefinitions\Orckestra.Azure.CloudPublisher.xml" />
+		<Add name="Bin\netstandard.dll" />
+		<Add name="Bin\LibGit2Sharp.dll" />
+		<Add name="Bin\LibGit2Sharp.pdb" />
+		<Add name="Bin\LibGit2Sharp.xml" />
+		<Add name="App_Data\sshkeys\readme.txt" />
+	</pc:Files>
+	<pc:Directories>
+		<Add name=".deploy\" />
+		<Add name="Composite\InstalledPackages\Orckestra.Azure.CloudPublisher\" />
+		<Add name="Bin\lib\" />
+	</pc:Directories>
+	<pc:Web.config />
+	<mi:PackageRequirements minimumCompositeVersion="6.3.0.0" maximumCompositeVersion="9.9999.9999.9999" />
+	<mi:PackageInformation name="Orckestra.Azure.CloudPublisher" groupName="Orckestra.Azure" version="0.0.3" author="marcus.wendt@orckestra.com" website="https://c1.orckestra.com/" readMoreUrl="https://c1.orckestra.com/" id="0ef8c56d-6774-4ca7-b0fa-cf9a44c86f86" canBeUninstalled="true" systemLocking="hard" flushOnCompletion="true" allowOverwrite="false" reloadConsoleOnCompletion="true">
+		<TechnicalDetails>See documentation online.</TechnicalDetails>
+		<Description>Enable git push of your website to a remote repo. Also contain deployment scripts that can deploy on Azure Web Apps (Azure Web Sites). By setting up your Azure web application to use git and continuous deployment, you have a full "push to cloud" solution, with git in the middle and AWS scale features.</Description>
+	</mi:PackageInformation>
+</pc:PackageCreator>

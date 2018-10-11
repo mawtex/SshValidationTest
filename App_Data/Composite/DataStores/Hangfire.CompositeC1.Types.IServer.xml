@@ -1,0 +1,5 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ServerElementsElements>
+  <ServerElements Id="maw:20920:4e6ca36a-2f7e-43f2-8cd1-b4c121a23814" Data="{&quot;WorkerCount&quot;:20,&quot;Queues&quot;:[&quot;default&quot;],&quot;StartedAt&quot;:&quot;2018-10-11T11:18:15.0709214Z&quot;}" LastHeartbeat="2018-10-11T11:20:15.2774686Z" />
+  <ServerElements Id="maw:22056:7124e589-380a-400d-acbd-1d1090964481" Data="{&quot;WorkerCount&quot;:20,&quot;Queues&quot;:[&quot;default&quot;],&quot;StartedAt&quot;:&quot;2018-10-11T11:22:36.4424304Z&quot;}" LastHeartbeat="2018-10-11T11:24:36.7087447Z" />
+</ServerElementsElements>

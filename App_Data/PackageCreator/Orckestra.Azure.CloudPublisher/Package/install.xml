@@ -1,0 +1,28 @@
+<?xml version="1.0" standalone="yes"?>
+<mi:PackageInstaller xmlns:mi="http://www.composite.net/ns/management/packageinstaller/1.0">
+	<mi:PackageRequirements minimumCompositeVersion="6.3.0.0" maximumCompositeVersion="9.9999.9999.9999" />
+	<mi:PackageInformation name="Orckestra.Azure.CloudPublisher" groupName="Orckestra.Azure" version="0.0.3" author="marcus.wendt@orckestra.com" website="https://c1.orckestra.com/" readMoreUrl="https://c1.orckestra.com/" id="0ef8c56d-6774-4ca7-b0fa-cf9a44c86f86" canBeUninstalled="true" systemLocking="hard" flushOnCompletion="true" allowOverwrite="false" reloadConsoleOnCompletion="true">
+		<TechnicalDetails>See documentation online.</TechnicalDetails>
+		<Description>Enable git push of your website to a remote repo. Also contain deployment scripts that can deploy on Azure Web Apps (Azure Web Sites). By setting up your Azure web application to use git and continuous deployment, you have a full "push to cloud" solution, with git in the middle and AWS scale features.</Description>
+	</mi:PackageInformation>
+	<mi:PackageFragmentInstallerBinaries />
+	<mi:PackageFragmentInstallers>
+		<mi:Add installerType="Composite.Core.PackageSystem.PackageFragmentInstallers.FilePackageFragmentInstaller, Composite" uninstallerType="Composite.Core.PackageSystem.PackageFragmentInstallers.FilePackageFragmentUninstaller, Composite">
+			<Files>
+				<File sourceFilename="~\.deployment" targetFilename="~\.deployment" allowOverwrite="false" />
+				<File sourceFilename="~\.gitignore" targetFilename="~\.gitignore" allowOverwrite="false" />
+				<File sourceFilename="~\App_Data\Composite\TreeDefinitions\Orckestra.Azure.CloudPublisher.xml" targetFilename="~\App_Data\Composite\TreeDefinitions\Orckestra.Azure.CloudPublisher.xml" allowOverwrite="false" />
+				<File sourceFilename="~\Bin\netstandard.dll" targetFilename="~\Bin\netstandard.dll" allowOverwrite="false" />
+				<File sourceFilename="~\Bin\LibGit2Sharp.dll" targetFilename="~\Bin\LibGit2Sharp.dll" allowOverwrite="false" />
+				<File sourceFilename="~\Bin\LibGit2Sharp.pdb" targetFilename="~\Bin\LibGit2Sharp.pdb" allowOverwrite="false" />
+				<File sourceFilename="~\Bin\LibGit2Sharp.xml" targetFilename="~\Bin\LibGit2Sharp.xml" allowOverwrite="false" />
+				<File sourceFilename="~\App_Data\sshkeys\readme.txt" targetFilename="~\App_Data\sshkeys\readme.txt" allowOverwrite="false" />
+			</Files>
+			<Directories>
+				<Directory sourceDirectory="~\.deploy\" targetDirectory="~\.deploy\" allowOverwrite="false" deleteTargetDirectory="false" />
+				<Directory sourceDirectory="~\Composite\InstalledPackages\Orckestra.Azure.CloudPublisher\" targetDirectory="~\Composite\InstalledPackages\Orckestra.Azure.CloudPublisher\" allowOverwrite="false" deleteTargetDirectory="false" />
+				<Directory sourceDirectory="~\Bin\lib\" targetDirectory="~\Bin\lib\" allowOverwrite="false" deleteTargetDirectory="false" />
+			</Directories>
+		</mi:Add>
+	</mi:PackageFragmentInstallers>
+</mi:PackageInstaller>
