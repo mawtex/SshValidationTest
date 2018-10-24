@@ -1,21 +1,16 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <AggregatedCounterElementsElements>
   <AggregatedCounterElements Id="1c494412-9c5c-4298-8dc4-07bb665b2b5c" Key="stats:succeeded:2018-09-26" Value="1" ExpireAt="2018-10-26T16:59:06.701806Z" />
+  <AggregatedCounterElements Id="1eb616de-eb0f-4a2f-b18a-088434aaf399" Key="stats:succeeded:2018-10-12" Value="1" ExpireAt="2018-11-12T02:00:03.5308357Z" />
+  <AggregatedCounterElements Id="204fb59b-192b-467b-9b5e-1e8dd4b8bfef" Key="stats:succeeded:2018-10-24-12" Value="1" ExpireAt="2018-10-25T12:45:17.9238049Z" />
   <AggregatedCounterElements Id="2733998d-b700-49c3-a995-24d0752adf05" Key="stats:succeeded:2018-10-11" Value="1" ExpireAt="2018-11-11T11:11:08.4892596Z" />
-  <AggregatedCounterElements Id="29a2a190-2992-4d99-a9c1-089f079bf6e8" Key="stats:succeeded:2018-09-24" Value="1" ExpireAt="2018-10-24T11:29:16.607325Z" />
   <AggregatedCounterElements Id="439ade79-a39e-4320-a726-fd73961bf93f" Key="stats:succeeded:2018-09-27" Value="1" ExpireAt="2018-10-27T10:28:09.6810406Z" />
-  <AggregatedCounterElements Id="6601e3b1-b3a7-4b0d-9de6-eee2ef053c33" Key="stats:succeeded:2018-09-21" Value="1" ExpireAt="2018-10-21T12:34:11.0725963Z" />
-  <AggregatedCounterElements Id="71d0b4ef-cc98-41e5-8cab-ff242fc0f337" Key="stats:succeeded:2018-09-19" Value="1" ExpireAt="2018-10-19T02:00:04.1730017Z" />
-  <AggregatedCounterElements Id="88432612-7d53-4e9e-beb0-e38efab21e4d" Key="stats:succeeded:2018-09-18" Value="1" ExpireAt="2018-10-18T15:08:07.7680699Z" />
+  <AggregatedCounterElements Id="8a7f97f3-55ab-400d-b9fe-b9a6d41ae7b7" Key="stats:succeeded:2018-10-18" Value="1" ExpireAt="2018-11-18T15:44:08.443938Z" />
   <AggregatedCounterElements Id="8e54077c-26c4-46ea-b8fe-829c0ccd8f65" Key="stats:succeeded:2018-09-28" Value="1" ExpireAt="2018-10-28T02:00:08.6251632Z" />
-  <AggregatedCounterElements Id="990b9b44-4d9d-4a98-83ca-e03e0a9a5378" Key="stats:succeeded:2018-09-14" Value="1" ExpireAt="2018-10-14T10:42:14.7150096Z" />
+  <AggregatedCounterElements Id="a04f836a-98fb-44dd-811f-4d6ffc625522" Key="stats:succeeded:2018-10-19" Value="1" ExpireAt="2018-11-19T02:00:05.479436Z" />
   <AggregatedCounterElements Id="aff49843-d5c4-4ae5-9132-eed0904b9ac8" Key="stats:succeeded:2018-10-03" Value="1" ExpireAt="2018-11-03T02:00:09.7322927Z" />
-  <AggregatedCounterElements Id="b6de728f-ccc3-4e48-85da-ed713de8ccf1" Key="stats:succeeded" Value="48" />
-  <AggregatedCounterElements Id="c4464e12-b8aa-4458-8d2c-f5ecc5c7d707" Key="stats:succeeded:2018-09-12" Value="1" ExpireAt="2018-10-12T02:00:03.6343654Z" />
-  <AggregatedCounterElements Id="d656b595-63a6-4436-9935-073e65d92f3f" Key="stats:succeeded:2018-09-13" Value="1" ExpireAt="2018-10-13T02:00:02.9380044Z" />
-  <AggregatedCounterElements Id="e21e459a-e391-4374-8d7c-8d6ef44fc01c" Key="stats:succeeded:2018-09-20" Value="1" ExpireAt="2018-10-20T02:00:03.0574671Z" />
-  <AggregatedCounterElements Id="e673aaec-d49b-45f8-b80e-9324448f968b" Key="stats:succeeded:2018-09-17" Value="1" ExpireAt="2018-10-17T10:54:15.0809162Z" />
+  <AggregatedCounterElements Id="b6de728f-ccc3-4e48-85da-ed713de8ccf1" Key="stats:succeeded" Value="52" />
   <AggregatedCounterElements Id="ede55450-99e8-442c-ad6b-f3882cd6d28c" Key="stats:succeeded:2018-10-02" Value="1" ExpireAt="2018-11-02T10:53:14.6771629Z" />
-  <AggregatedCounterElements Id="ef986f23-8aef-4846-a20f-91303aee233b" Key="stats:succeeded:2018-10-11-11" Value="1" ExpireAt="2018-10-12T11:11:08.4982838Z" />
+  <AggregatedCounterElements Id="f2004429-b1d3-42d0-94d6-ccc2301b4a24" Key="stats:succeeded:2018-10-24" Value="1" ExpireAt="2018-11-24T12:45:17.9172772Z" />
   <AggregatedCounterElements Id="fe07b338-eb42-44ef-8f27-33620046ff0b" Key="stats:succeeded:2018-09-25" Value="1" ExpireAt="2018-10-25T02:00:09.82178Z" />
 </AggregatedCounterElementsElements>

@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <JobParameterElementsElements>
-  <JobParameterElements Id="1eefa209-2304-452a-8b41-5bacfeacd04e" JobId="0c2a2eb8-04ca-411d-9a65-e2c7a197b5b4" Name="RecurringJobId" Value="&quot;sitemap-generation&quot;" />
-  <JobParameterElements Id="38129b95-6655-4ca6-bd34-ed56b0799e8b" JobId="0c2a2eb8-04ca-411d-9a65-e2c7a197b5b4" Name="CurrentCulture" Value="&quot;en-US&quot;" />
-  <JobParameterElements Id="6449ea86-0995-459f-9768-50f49c6dab6e" JobId="0c2a2eb8-04ca-411d-9a65-e2c7a197b5b4" Name="CurrentUICulture" Value="&quot;en-US&quot;" />
+  <JobParameterElements Id="3519a898-c7b3-412e-94a9-230613404ac3" JobId="0635d41b-2de0-4fbb-b2fe-325a0981a753" Name="CurrentCulture" Value="&quot;en-US&quot;" />
+  <JobParameterElements Id="ce04b028-22fb-4e97-9798-d8d0f072d6eb" JobId="0635d41b-2de0-4fbb-b2fe-325a0981a753" Name="CurrentUICulture" Value="&quot;en-US&quot;" />
+  <JobParameterElements Id="ed436851-d1cb-4c45-8226-8a1ceda42081" JobId="0635d41b-2de0-4fbb-b2fe-325a0981a753" Name="RecurringJobId" Value="&quot;sitemap-generation&quot;" />
 </JobParameterElementsElements>

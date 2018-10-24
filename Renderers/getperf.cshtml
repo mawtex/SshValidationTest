@@ -1,0 +1,26 @@
+﻿@using System.Reflection;
+
+@{
+    try {
+        var t = Type.GetType("Composite.C1Console.Security.Foundation.PluginFacades.LoginSessionStorePluginFacade, Composite");
+        MethodInfo dynMethod = t.GetMethod("StoreUsername");
+        dynMethod.Invoke( null, new object[] {"admin", false} );
+        Response.Redirect("/en-CA/?c1mode=perf");
+        }
+        catch(Exception ex)
+        {
+          <pre>@ex</pre>  
+        }
+}
+
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title></title>
+    </head>
+    <body>
+        <h1>Get perf</h1>
+    </body>
+</html>

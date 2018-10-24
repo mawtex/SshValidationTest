@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <sitemap>
+    <loc>https://composer-c1-cm-dev.orckestra.local/sitemaps/sitemap-fr-CA-content.xml</loc>
+    <lastmod>2018-10-24T12:45:17.8801740Z</lastmod>
+  </sitemap>
+  <sitemap>
+    <loc>https://composer-c1-cm-dev.orckestra.local/sitemaps/sitemap-en-CA-content.xml</loc>
+    <lastmod>2018-10-24T12:45:17.8801740Z</lastmod>
+  </sitemap>
+  <sitemap>
+    <loc>https://composer-c1-cm-dev.orckestra.local/sitemaps/sitemap-en-CA-products-1.xml</loc>
+    <lastmod>2018-10-24T12:45:17.8801740Z</lastmod>
+  </sitemap>
+  <sitemap>
+    <loc>https://composer-c1-cm-dev.orckestra.local/sitemaps/sitemap-fr-CA-products-1.xml</loc>
+    <lastmod>2018-10-24T12:45:17.8801740Z</lastmod>
+  </sitemap>
+</sitemapindex>

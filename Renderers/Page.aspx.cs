@@ -120,7 +120,7 @@ public partial class Renderers_Page : System.Web.UI.Page
         xhtml = _renderingContext.FormatXhtml(xhtml);
 
         // Inserting perfomance profiling information
-        if (_renderingContext.ProfilingEnabled)
+        if (_renderingContext.ProfilingEnabled || Request["c1perf"]=="true")
         {
             xhtml = _renderingContext.BuildProfilerReport();
 
