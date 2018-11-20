@@ -8,7 +8,7 @@ $leaveOnDeploymentDirectories = @(                # Directories that are not in 
     "Search",
     "forms",
     "Xslt",
-    "InlineCSharpFunctions")                    # the forms, xslt and InlineCSharpFunctions are here because C1 runtime will create these (empty). And then /MOR will delete - and IIS restart
+    "InlineCSharpFunctions")                    # the forms, xslt and InlineCSharpFunctions are here because C1 runtime will create these (empty). And then /MIR will delete - and IIS restart
 
 #
 # defaults
@@ -122,8 +122,13 @@ Get-ChildItem "$deploymentTemp\*" -include $allEnvFilenamePatterns -Recurse -For
 #
 [console]::WriteLine("Robocopy to target, pure copy only, affected files:")
 robocopy /e $deploymentTemp $deploymentTarget /r:1 /w:1 /njh /ndl /nc /ns /np 
-[console]::WriteLine("Robocopy to target, mirroring (excluding $leaveOnDeploymentDirectories), affected files / directories:")
-[console]::WriteLine("    (Be aware that directories listed by RoboCopy below are likely being deleted and will cause the IIS AppPool to recycle)")
-robocopy /mir $deploymentTemp $deploymentTarget /r:3 /w:5 /njh /ndl /nc /ns /np /xd @leaveOnDeploymentDirectories
+
+#
+# MIRRORING DISABLED
+#
+#[console]::WriteLine("Robocopy to target, mirroring (excluding $leaveOnDeploymentDirectories), affected files / directories:")
+#[console]::WriteLine("    (Be aware that directories listed by RoboCopy below are likely being deleted and will cause the IIS AppPool to recycle)")
+#robocopy /mir $deploymentTemp $deploymentTarget /r:3 /w:5 /njh /ndl /nc /ns /np /xd @leaveOnDeploymentDirectories
+
 [console]::WriteLine("    Completed custom part of deployment")
 
