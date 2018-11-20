@@ -132,3 +132,4 @@ robocopy /e $deploymentTemp $deploymentTarget /r:1 /w:1 /njh /ndl /nc /ns /np
 
 [console]::WriteLine("    Completed custom part of deployment")
 
+# change
