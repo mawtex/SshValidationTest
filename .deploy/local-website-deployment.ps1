@@ -118,6 +118,22 @@ Get-ChildItem "$deploymentTemp\*" -include $allEnvFilenamePatterns -Recurse -For
 [console]::WriteLine("    deleted all environment specific template files")
 
 #
+# ensuring Composite.Generated.dll changes are actual an change (otherwise file is skipped to abvoid restart)
+#
+$fileGeneratedFromGit = "$deploymentTemp\bin\Composite.Generated.dll"
+$fileGeneratedTarget = "$deploymentTarget\bin\Composite.Generated.dll"
+
+if ((Test-Path $fileGeneratedFromGit) -and (Test-Path $fileGeneratedTarget))
+{
+	if ((Get-Item $fileGeneratedFromGit).Length -eq (Get-Item $fileGeneratedTarget).Length)
+	{
+     # Grab Target version (ignore git change) ensuring later mirror or diff copy leaves target as is
+     Copy-Item $fileGeneratedTarget -Destination $fileGeneratedFromGit -Force
+	[console]::WriteLine("Keeping deployment's Composite.Generated.dll")
+	}
+}
+
+#
 # final copying
 #
 [console]::WriteLine("Robocopy to target, pure copy only, affected files:")
@@ -132,4 +148,3 @@ robocopy /e $deploymentTemp $deploymentTarget /r:1 /w:1 /njh /ndl /nc /ns /np
 
 [console]::WriteLine("    Completed custom part of deployment")
 
-# change
