@@ -9,13 +9,13 @@
     <KeyPropertyName name="Id" />
   </KeyPropertyNames>
   <SuperInterfaces>
-    <SuperInterface type="Composite.Data.ProcessControlled.IPublishControlled,Composite" />
     <SuperInterface type="Composite.Data.ProcessControlled.IProcessControlled,Composite" />
+    <SuperInterface type="Composite.Data.ProcessControlled.IPublishControlled,Composite" />
     <SuperInterface type="Composite.Data.ProcessControlled.ILocalizedControlled,Composite" />
   </SuperInterfaces>
   <Fields>
     <DataFieldDescriptor id="65fe7571-b201-4e27-9d24-1f617a663916" name="Id" isNullable="false" position="-1" groupByPriority="0" inherited="false" instanceType="System.Guid, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" storeType="PhysicalStoreType='Guid'" isReadOnly="false">
-      <FormRenderingProfile />
+      <FormRenderingProfile label="Id" />
       <ValidationFunctionMarkups />
     </DataFieldDescriptor>
     <DataFieldDescriptor id="7ee65e76-9244-4638-a812-dfe50c11e151" name="Title" isNullable="false" position="0" groupByPriority="0" inherited="false" instanceType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" storeType="PhysicalStoreType='String'Length='1024'" isReadOnly="false" defaultValue="ValueType='String'Value=''">
@@ -67,17 +67,14 @@
       <FormRenderingProfile label="Display comments" helpText="If this option is selected, the comments to blog entries will be displayed." widgetFunctionMarkup="&lt;f:widgetfunction xmlns:f=&quot;http://www.composite.net/ns/function/1.0&quot; name=&quot;Composite.Widgets.Bool.CheckBox&quot; label=&quot;&quot; bindingsourcename=&quot;&quot;&gt;&lt;f:helpdefinition xmlns:f=&quot;http://www.composite.net/ns/function/1.0&quot; helptext=&quot;&quot; /&gt;&lt;/f:widgetfunction&gt;" />
       <ValidationFunctionMarkups />
     </DataFieldDescriptor>
-    <DataFieldDescriptor id="14ca41a2-1337-4b1f-9495-0874ced6e8ee" name="AllowNewComments" isNullable="false" position="11" groupByPriority="0" inherited="false" instanceType="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" storeType="PhysicalStoreType='Boolean'" isReadOnly="false" newInstanceDefaultFieldValue="&lt;f:function xmlns:f=&quot;http://www.composite.net/ns/function/1.0&quot; name=&quot;Composite.Constant.Boolean&quot;&gt;&lt;f:param name=&quot;Constant&quot; value=&quot;True&quot; /&gt;&lt;/f:function&gt;" defaultValue="ValueType='Boolean'Value='False'">
+    <DataFieldDescriptor id="14ca41a2-1337-4b1f-9495-0874ced6e8ee" name="AllowNewCommentz" isNullable="false" position="11" groupByPriority="0" inherited="false" instanceType="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" storeType="PhysicalStoreType='Boolean'" isReadOnly="false" newInstanceDefaultFieldValue="&lt;f:function xmlns:f=&quot;http://www.composite.net/ns/function/1.0&quot; name=&quot;Composite.Constant.Boolean&quot;&gt;&lt;f:param name=&quot;Constant&quot; value=&quot;True&quot; /&gt;&lt;/f:function&gt;" defaultValue="ValueType='Boolean'Value='False'">
       <FormRenderingProfile label="Allow new comments" helpText="If this option is selected, adding new comments to blog entries will be allowed." widgetFunctionMarkup="&lt;f:widgetfunction xmlns:f=&quot;http://www.composite.net/ns/function/1.0&quot; name=&quot;Composite.Widgets.Bool.CheckBox&quot; label=&quot;&quot; bindingsourcename=&quot;&quot;&gt;&lt;f:helpdefinition xmlns:f=&quot;http://www.composite.net/ns/function/1.0&quot; helptext=&quot;&quot; /&gt;&lt;/f:widgetfunction&gt;" />
-      <ValidationFunctionMarkups />
     </DataFieldDescriptor>
     <DataFieldDescriptor id="fab1cf0c-66b0-11dc-a47e-cf6356d89593" name="PublicationStatus" isNullable="false" position="50" groupByPriority="0" inherited="true" instanceType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" storeType="PhysicalStoreType='String'Length='64'" isReadOnly="false" defaultValue="ValueType='String'Value=''">
       <FormRenderingProfile />
-      <ValidationFunctionMarkups />
     </DataFieldDescriptor>
     <DataFieldDescriptor id="0456ebb0-7fb1-46cd-9a23-4ae9aa3337fa" name="SourceCultureName" isNullable="false" position="1000" groupByPriority="0" inherited="true" instanceType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" storeType="PhysicalStoreType='String'Length='16'" isReadOnly="false" defaultValue="ValueType='String'Value=''">
       <FormRenderingProfile />
-      <ValidationFunctionMarkups />
     </DataFieldDescriptor>
   </Fields>
 </DataTypeDescriptor>
