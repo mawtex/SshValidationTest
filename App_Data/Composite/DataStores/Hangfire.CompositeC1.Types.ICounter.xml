@@ -1,2 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<CounterElementsElements />
+<CounterElementsElements>
+  <CounterElements Id="656f0c61-741e-4d22-b40b-3f5b298c9f95" Key="stats:succeeded:2018-11-23-13" Value="1" ExpireAt="2018-11-24T13:11:04.300311Z" />
+  <CounterElements Id="b586ae56-4198-49df-a15a-970091e3a746" Key="stats:succeeded:2018-11-23" Value="1" ExpireAt="2018-12-23T13:11:04.2952574Z" />
+  <CounterElements Id="c25d30b3-46c7-44db-9c3e-61ae630e6256" Key="stats:succeeded" Value="1" />
+</CounterElementsElements>

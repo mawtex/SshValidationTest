@@ -2,18 +2,18 @@
 <sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <sitemap>
     <loc>https://composer-c1-cm-dev.orckestra.local/sitemaps/sitemap-fr-CA-content.xml</loc>
-    <lastmod>2018-10-24T12:45:17.8801740Z</lastmod>
+    <lastmod>2018-11-23T13:11:04.2360950Z</lastmod>
   </sitemap>
   <sitemap>
     <loc>https://composer-c1-cm-dev.orckestra.local/sitemaps/sitemap-en-CA-content.xml</loc>
-    <lastmod>2018-10-24T12:45:17.8801740Z</lastmod>
-  </sitemap>
-  <sitemap>
-    <loc>https://composer-c1-cm-dev.orckestra.local/sitemaps/sitemap-en-CA-products-1.xml</loc>
-    <lastmod>2018-10-24T12:45:17.8801740Z</lastmod>
+    <lastmod>2018-11-23T13:11:04.2360950Z</lastmod>
   </sitemap>
   <sitemap>
     <loc>https://composer-c1-cm-dev.orckestra.local/sitemaps/sitemap-fr-CA-products-1.xml</loc>
-    <lastmod>2018-10-24T12:45:17.8801740Z</lastmod>
+    <lastmod>2018-11-23T13:11:04.2360950Z</lastmod>
+  </sitemap>
+  <sitemap>
+    <loc>https://composer-c1-cm-dev.orckestra.local/sitemaps/sitemap-en-CA-products-1.xml</loc>
+    <lastmod>2018-11-23T13:11:04.2360950Z</lastmod>
   </sitemap>
 </sitemapindex>
